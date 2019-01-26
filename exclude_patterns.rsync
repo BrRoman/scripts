@@ -1,0 +1,13 @@
+.cache*
+*Trash*
+*.iso
+*.aux
+*.gaux
+*.glog
+*.log
+*texlive*
+*VirtualBox*
+settings.py
+wsgi.py
+__pycache__*
+.*.sw[op]

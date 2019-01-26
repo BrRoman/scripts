@@ -1,0 +1,76 @@
+#!/bin/sh
+
+########################
+##       SYSTEM       ##
+########################
+
+MAILADDR=editeur@traditions-monastiques.com
+HOSTNAME=your_hostname_here
+BACKUPDIR=/home/fr_romain/
+EXCLUDES=/home/fr_romain/Scripts/exclude_patterns.rsync
+ARCHIVEROOT=/media/fr_romain/SVG_SYSTEM/fr_romain
+CURRENT=main
+INCREMENTDIR=`date +%Y-%m-%d`
+OPTIONS="--force --ignore-errors --delete --delete-excluded \
+ --exclude-from=$EXCLUDES --backup --backup-dir=$ARCHIVEROOT/$INCREMENTDIR -av"
+export PATH=$PATH:/bin:/usr/bin:/usr/local/bin
+install -d $ARCHIVEROOT/$CURRENT
+do_rsync()
+{
+   rsync $OPTIONS $BACKUPDIR $ARCHIVEROOT/$CURRENT
+}
+do_accounting()
+{
+   echo "Backup Accounting for Day $INCREMENTDIR on $HOSTNAME:">/tmp/rsync_script_tmpfile
+   echo >> /tmp/rsync_script_tmpfile
+   echo "################################################">>/tmp/rsync_script_tmpfile
+   du -s $ARCHIVEROOT/* >> /tmp/rsync_script_tmpfile
+   echo "Mail $MAILADDR -s $HOSTNAME Backup Report < /tmp/rsync_script_tmpfile"
+   Mail $MAILADDR -s $HOSTNAME Backup Report < /tmp/rsync_script_tmpfile
+   echo "rm /tmp/rsync_script_tmpfile"
+   rm /tmp/rsync_script_tmpfile
+}
+if [ -f $EXCLUDES ]; then
+ if [ -d $BACKUPDIR ]; then
+  do_rsync
+ else
+  echo "cant find $BACKUPDIR"; exit
+ fi
+ else
+  echo "cant find $EXCLUDES"; exit
+fi
+
+######################
+##       DATA       ##
+######################
+
+BACKUPDIR=/media/fr_romain/DATA/
+ARCHIVEROOT=/media/fr_romain/SVG_DATA
+OPTIONS="--force --ignore-errors --delete --delete-excluded \
+ --exclude-from=$EXCLUDES --backup --backup-dir=$ARCHIVEROOT/$INCREMENTDIR -av"
+install -d $ARCHIVEROOT/$CURRENT
+do_rsync()
+{
+   rsync $OPTIONS $BACKUPDIR $ARCHIVEROOT/$CURRENT
+}
+do_accounting()
+{
+   echo "Backup Accounting for Day $INCREMENTDIR on $HOSTNAME:">/tmp/rsync_script_tmpfile
+   echo >> /tmp/rsync_script_tmpfile
+   echo "################################################">>/tmp/rsync_script_tmpfile
+   du -s $ARCHIVEROOT/* >> /tmp/rsync_script_tmpfile
+   echo "Mail $MAILADDR -s $HOSTNAME Backup Report < /tmp/rsync_script_tmpfile"
+   Mail $MAILADDR -s $HOSTNAME Backup Report < /tmp/rsync_script_tmpfile
+   echo "rm /tmp/rsync_script_tmpfile"
+   rm /tmp/rsync_script_tmpfile
+}
+if [ -f $EXCLUDES ]; then
+ if [ -d $BACKUPDIR ]; then
+  do_rsync
+ else
+  echo "cant find $BACKUPDIR"; exit
+ fi
+ else
+  echo "cant find $EXCLUDES"; exit
+fi
+
