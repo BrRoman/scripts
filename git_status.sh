@@ -59,6 +59,22 @@ git lg -10
 echo
 echo '--------------------'
 echo
+echo 'Polyglotte:'
+cd "/media/fr_romain/DATA/Sites/polyglotte/"
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'Scripts:'
+cd "/home/fr_romain/Scripts/"
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
 echo 'Woodadmin :'
 cd "/media/fr_romain/DATA/Sites/woodadmin/"
 git fetch upstream
