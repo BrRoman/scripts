@@ -1,9 +1,12 @@
 #!/bin/bash
 
+
+# PERSO :
+
 echo
 echo '--------------------'
 echo
-echo 'Absences :'
+echo 'absences :'
 cd "/media/fr_romain/DATA/Sites/absences/"
 git st
 git lg -10
@@ -11,7 +14,15 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Editor :'
+echo 'anniversaires :'
+cd "/media/fr_romain/DATA/Sites/anniversaires/"
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'editor :'
 cd "/media/fr_romain/DATA/Editions/editor/"
 git st
 git lg -10
@@ -19,7 +30,7 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Liturgie :'
+echo 'liturgie :'
 cd "/media/fr_romain/DATA/Documents/Liturgie/liturgie/"
 git st
 git lg -10
@@ -27,7 +38,7 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Livrets :'
+echo 'livrets :'
 cd "/media/fr_romain/DATA/Sites/livrets/"
 git st
 git lg -10
@@ -35,7 +46,7 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Missa :'
+echo 'missa :'
 cd "/media/fr_romain/DATA/Sites/missa/"
 git st
 git lg -10
@@ -43,7 +54,7 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Ordomatic :'
+echo 'ordomatic :'
 cd "/media/fr_romain/DATA/Sites/ordomatic/"
 git st
 git lg -10
@@ -51,7 +62,7 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Ornitho :'
+echo 'ornitho :'
 cd "/media/fr_romain/DATA/Sites/ornitho/"
 git st
 git lg -10
@@ -59,7 +70,7 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Polyglotte:'
+echo 'polyglotte:'
 cd "/media/fr_romain/DATA/Sites/polyglotte/"
 git st
 git lg -10
@@ -67,19 +78,13 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Scripts:'
+echo 'scripts:'
 cd "/home/fr_romain/Scripts/"
 git st
 git lg -10
 
-echo
-echo '--------------------'
-echo
-echo 'Woodadmin :'
-cd "/media/fr_romain/DATA/Sites/woodadmin/"
-git fetch upstream
-git st
-git lg -10
+
+# VIANNEY :
 
 echo
 echo '--------------------'
@@ -93,7 +98,37 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Gregorio :'
+echo 'woodadmin :'
+cd "/media/fr_romain/DATA/Sites/woodadmin/"
+git fetch upstream
+git st
+git lg -10
+
+
+# FORKS :
+
+echo
+echo '--------------------'
+echo
+echo 'collatinus :'
+cd "/media/fr_romain/DATA/Documents/Langues/Latin/Collatinus/collatinus/"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'divinum-officium :'
+cd "/media/fr_romain/DATA/Documents/Liturgie/divinum-officium/"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'gregorio :'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/Gregorio/gregorio/"
 git fetch upstream
 git st
@@ -102,7 +137,7 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'Gregorio site :'
+echo 'gregorio site :'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/Gregorio/gregorio-doc/"
 git fetch upstream
 git st
@@ -129,17 +164,8 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'divinum-officium :'
-cd "/media/fr_romain/DATA/Documents/Liturgie/divinum-officium/"
-git fetch upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'collatinus :'
-cd "/media/fr_romain/DATA/Documents/Langues/Latin/Collatinus/collatinus/"
+echo 'php-barcode:'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/php-barcode"
 git fetch upstream
 git st
 git lg -10
@@ -149,15 +175,6 @@ echo '--------------------'
 echo
 echo 'zeal :'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/zeal/"
-git fetch upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'php-barcode:'
-cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/php-barcode"
 git fetch upstream
 git st
 git lg -10
