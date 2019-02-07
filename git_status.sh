@@ -70,14 +70,6 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'polyglotte:'
-cd "/media/fr_romain/DATA/Sites/polyglotte/"
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
 echo 'scripts:'
 cd "/home/fr_romain/Scripts/"
 git st
