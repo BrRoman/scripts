@@ -4,9 +4,10 @@ export_php(){
     echo
     echo -----------------------
     echo $1
-    rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/exclude_patterns.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/sites/$2
+    rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/exclude_patterns_server.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/sites/$2
 }
 export_php "absences_php/" "absences/"
+export_php "absences/" "absences_django/"
 export_php "accenteur/" "accenteur/"
 export_php "accueil/" ""
 export_php "barcode_js/" "barcode_js/"

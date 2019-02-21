@@ -7,7 +7,5 @@
 *.log
 *texlive*
 *VirtualBox*
-settings.py
-wsgi.py
 __pycache__*
 .*.sw[op]

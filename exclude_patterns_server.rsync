@@ -1,0 +1,9 @@
+*.aux
+*.gaux
+*.glog
+*.log
+*texlive*
+settings.py
+wsgi.py
+__pycache__*
+.*.sw[op]
