@@ -14,14 +14,6 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'anniversaires :'
-cd "/media/fr_romain/DATA/Sites/anniversaires/"
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
 echo 'editor :'
 cd "/media/fr_romain/DATA/Editions/editor/"
 git st
