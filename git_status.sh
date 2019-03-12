@@ -47,7 +47,7 @@ echo
 echo '--------------------'
 echo
 echo 'ordomatic:'
-cd "/media/fr_romain/DATA/Sites/ordo-project/ordomatic/"
+cd "/media/fr_romain/DATA/Sites/ordomatic/"
 git st
 git lg -10
 
@@ -55,7 +55,7 @@ echo
 echo '--------------------'
 echo
 echo 'ordomatic-flav:'
-cd "/media/fr_romain/DATA/Sites/ordo-project/ordomatic-flav/"
+cd "/media/fr_romain/DATA/Sites/ordomatic-flav/"
 git st
 git lg -10
 
