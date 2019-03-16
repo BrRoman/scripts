@@ -6,8 +6,8 @@
 echo
 echo '--------------------'
 echo
-echo 'absences:'
-cd "/media/fr_romain/DATA/Sites/absences/"
+echo 'absences_django:'
+cd "/media/fr_romain/DATA/Sites/absences_django/"
 git st
 git lg -10
 
