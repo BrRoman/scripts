@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd '/home/fr_romain/Desktop/L1300'
-find . -type f -name '*.tif' | sort | while read
+cd '/home/fr_romain/Sites/ornitho/'
+find . -type f -name '*.php' | sort | while read
 do
     f=`echo "$REPLY"`
-    fn=`echo "$REPLY" | sed 's/F...\.tif/F.tif/g'`
+    fn=`echo "$REPLY" | sed 's/php/html/g'`
     #echo "$fn"
     mv "$f" "$fn"
 done

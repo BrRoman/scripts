@@ -7,7 +7,7 @@
 MAILADDR=editeur@traditions-monastiques.com
 HOSTNAME=your_hostname_here
 BACKUPDIR=/home/fr_romain/
-EXCLUDES=/home/fr_romain/Scripts/exclude_patterns_svg.rsync
+EXCLUDES=/home/fr_romain/Scripts/backup_exclude.rsync
 ARCHIVEROOT=/media/fr_romain/SVG_SYSTEM/fr_romain
 CURRENT=main
 INCREMENTDIR=`date +%Y-%m-%d`
