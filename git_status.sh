@@ -6,8 +6,8 @@
 echo
 echo '--------------------'
 echo
-echo 'absences_django:'
-cd "/media/fr_romain/DATA/Sites/absences_django/"
+echo 'absences:'
+cd "/media/fr_romain/DATA/Sites/absences/"
 git st
 git lg -10
 
@@ -40,6 +40,14 @@ echo '--------------------'
 echo
 echo 'missa:'
 cd "/media/fr_romain/DATA/Sites/missa/"
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'ordo-doc:'
+cd "/media/fr_romain/DATA/Sites/ordo-doc/"
 git st
 git lg -10
 
@@ -113,15 +121,6 @@ echo '--------------------'
 echo
 echo 'divinum-officium:'
 cd "/media/fr_romain/DATA/Documents/Liturgie/divinum-officium/"
-git fetch upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'django-widget-tweaks:'
-cd "/home/fr_romain/.local/lib/python3.6/site-packages/django-widget-tweaks/"
 git fetch upstream
 git st
 git lg -10
