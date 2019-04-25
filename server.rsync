@@ -15,6 +15,7 @@ export_site "courses/" "courses/"
 export_site "editor/" "editor/"
 export_site "gregorio-doc/" "gregorio-doc/"
 export_site "gregorio-jgabc/" "gregorio-jgabc/"
+export_site "hotellerie/" "hotellerie/"
 export_site "livrets/" "livrets/"
 export_site "missa/" "missa/"
 export_site "ordo-doc/" "ordo-doc/"
@@ -22,6 +23,7 @@ export_site "ordomatic/" "ordomatic_univ/"
 export_site "ordomatic-flav/" "ordomatic_flav/"
 export_site "ornitho/" "ornitho/"
 export_site "sql/" "sql/"
+export_site "statistiques/" "statistiques/"
 
 
 echo
