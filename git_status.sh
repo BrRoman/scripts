@@ -22,6 +22,14 @@ git lg -10
 echo
 echo '--------------------'
 echo
+echo 'hotellerie:'
+cd "/media/fr_romain/DATA/Sites/hotellerie/"
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
 echo 'liturgie:'
 cd "/media/fr_romain/DATA/Documents/Liturgie/liturgie/"
 git st
@@ -46,8 +54,8 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'ordo-doc:'
-cd "/media/fr_romain/DATA/Sites/ordo-doc/"
+echo 'ordo_flav:'
+cd "/media/fr_romain/DATA/Sites/ordo_flav/"
 git st
 git lg -10
 
@@ -56,14 +64,6 @@ echo '--------------------'
 echo
 echo 'ordomatic:'
 cd "/media/fr_romain/DATA/Sites/ordomatic/"
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'ordomatic-flav:'
-cd "/media/fr_romain/DATA/Sites/ordomatic-flav/"
 git st
 git lg -10
 
@@ -80,6 +80,14 @@ echo '--------------------'
 echo
 echo 'scripts:'
 cd "/home/fr_romain/Scripts/"
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'statistiques:'
+cd "/media/fr_romain/DATA/Sites/statistiques/"
 git st
 git lg -10
 
