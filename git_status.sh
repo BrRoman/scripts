@@ -91,6 +91,14 @@ cd "/media/fr_romain/DATA/Sites/statistiques/"
 git st
 git lg -10
 
+echo
+echo '--------------------'
+echo
+echo 'typetrainer:'
+cd "/media/fr_romain/DATA/Sites/typetrainer/"
+git st
+git lg -10
+
 
 # VIANNEY :
 

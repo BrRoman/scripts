@@ -23,6 +23,7 @@ export_site "ordomatic/" "ordomatic++/"
 export_site "ornitho/" "ornitho/"
 export_site "sql/" "sql/"
 export_site "statistiques/" "statistiques/"
+export_site "typetrainer/" "typetrainer/"
 
 
 echo
