@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-# PERSO :
-
 echo
 echo '--------------------'
 echo
@@ -98,30 +95,6 @@ echo 'typetrainer:'
 cd "/media/fr_romain/DATA/Sites/typetrainer/"
 git st
 git lg -10
-
-
-# VIANNEY :
-
-echo
-echo '--------------------'
-echo
-echo 'compta:'
-cd "/media/fr_romain/DATA/Sites/compta/"
-git fetch upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'woodadmin:'
-cd "/media/fr_romain/DATA/Sites/woodadmin/"
-git fetch upstream
-git st
-git lg -10
-
-
-# FORKS :
 
 echo
 echo '--------------------'
