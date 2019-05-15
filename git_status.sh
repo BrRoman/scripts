@@ -189,6 +189,15 @@ git lg -10
 echo
 echo '--------------------'
 echo
+echo 'TCPDF:'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/TCPDF"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
 echo 'zeal:'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/zeal/"
 git fetch upstream
