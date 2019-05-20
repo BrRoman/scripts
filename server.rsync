@@ -1,17 +1,29 @@
 #!/bin/bash
 
+
+
+######################################################
+# This script exports local sites to services.asj.com.
+######################################################
+
+
+# Export git sites that are on branch master:
 export_site(){
     echo
     echo -----------------------
     echo $1
-    rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/sites/$2
+    cd ~/Sites/$1
+    branch=`git branch --points-at HEAD`
+    if [ "$branch" == '* master' ]; then
+        rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/sites/$2
+    else
+        echo "On branch *${branch#** }*";
+    fi
 }
-export_site "absences/" "absences++/"
+export_site "absences/" "absences/"
 export_site "accenteur/" "accenteur/"
-export_site "accueil/" ""
 export_site "barcode_js/" "barcode_js/"
 export_site "barcode_php/" "barcode_php/"
-export_site "courses/" "courses/"
 export_site "editor/" "editor/"
 export_site "gregorio-doc/" "gregorio-doc/"
 export_site "gregorio-jgabc/" "gregorio-jgabc/"
@@ -21,11 +33,17 @@ export_site "missa/" "missa/"
 export_site "ordo_flav/" "ordomatic/"
 export_site "ordomatic/" "ordomatic++/"
 export_site "ornitho/" "ornitho/"
-export_site "sql/" "sql/"
 export_site "statistiques/" "statistiques/"
 export_site "typetrainer/" "typetrainer/"
 
 
+# Export not-gite sites:
+rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/accueil fr_romain@192.168.1.21:/home/fr_romain/sites/
+rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/courses fr_romain@192.168.1.21:/home/fr_romain/sites/courses
+rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/sql fr_romain@192.168.1.21:/home/fr_romain/sites/sql
+
+
+# Export Editions:
 echo
 echo -----------------------
 echo "Éditions/"
