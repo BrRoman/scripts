@@ -14,7 +14,7 @@ export_site(){
     echo $1
     cd ~/Sites/$1
     branch=`git branch --points-at HEAD`
-    if [ "$branch" == '* master' ]; then
+    if [ "${branch#** }" == 'master' ]; then
         rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/sites/$2
     else
         echo "On branch *${branch#** }*";
@@ -38,9 +38,18 @@ export_site "typetrainer/" "typetrainer/"
 
 
 # Export not-gite sites:
-rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/accueil fr_romain@192.168.1.21:/home/fr_romain/sites/
-rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/courses fr_romain@192.168.1.21:/home/fr_romain/sites/courses
-rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/sql fr_romain@192.168.1.21:/home/fr_romain/sites/sql
+echo
+echo -----------------------
+echo "accueil/"
+rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/accueil/ fr_romain@192.168.1.21:/home/fr_romain/sites/
+echo
+echo -----------------------
+echo "courses/"
+rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/courses/ fr_romain@192.168.1.21:/home/fr_romain/sites/courses
+echo
+echo -----------------------
+echo "sql/"
+rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/sql/ fr_romain@192.168.1.21:/home/fr_romain/sites/sql
 
 
 # Export Editions:
