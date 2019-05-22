@@ -13,11 +13,11 @@ export_site(){
     echo -----------------------
     echo $1
     cd ~/Sites/$1
-    branch=`git branch --points-at HEAD`
-    if [ "${branch#** }" == 'master' ]; then
-        rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/sites/$2
+    branch=`git branch | grep \* | cut -d ' ' -f2`
+    if [ "$branch" == 'master' ]; then
+        rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/Sites/$2
     else
-        echo "On branch *${branch#** }*";
+        echo "On branch *$branch*";
     fi
 }
 export_site "absences/" "absences/"
