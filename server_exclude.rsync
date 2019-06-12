@@ -9,3 +9,4 @@ __pycache__*
 .*.sw[op]
 comptaperso.sql
 woodiens.sql
+*_server.sql
