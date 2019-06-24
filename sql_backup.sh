@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # mysqldump all the databases:
-mysqldump(){
-    echo "$1 : "
-    `mysqldump -u root $1 > ~/Sites/sql/$1.sql`
+dumpmysql(){
+    `mysqldump $1 > ~/Sites/sql/$1.sql`
     if [ "$?" -eq 0 ]; then
-        echo "    Success"
+        echo "$1 dumped with success!"
     else
-        echo "    Problem"
+        echo "$1: problem: $status"
     fi
+    echo "---"
 }
-mysqldump absences
-mysqldump editor
-mysqldump hotellerie 
-mysqldump livrets
-mysqldump missa
-mysqldump ordomatic
-mysqldump statistiques 
+dumpmysql absences
+dumpmysql editor
+dumpmysql hotellerie 
+dumpmysql livrets
+dumpmysql missa
+dumpmysql ordomatic
+dumpmysql statistiques 
