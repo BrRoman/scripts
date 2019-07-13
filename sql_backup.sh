@@ -6,7 +6,7 @@ dumpmysql(){
     if [ "$?" -eq 0 ]; then
         echo "$1 dumped with success!"
     else
-        echo "$1: problem: $status"
+        echo "$1: problem"
     fi
     echo "---"
 }
