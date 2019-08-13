@@ -19,15 +19,6 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'accenteur.wiki:'
-cd "/media/fr_romain/DATA/Sites/accenteur.wiki/"
-git fetch origin
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
 echo 'editor:'
 cd "/media/fr_romain/DATA/Editions/editor/"
 git st
@@ -78,15 +69,6 @@ echo '--------------------'
 echo
 echo 'ordomatic:'
 cd "/media/fr_romain/DATA/Sites/ordomatic/"
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'ordomatic.wiki:'
-cd "/media/fr_romain/DATA/Sites/ordomatic.wiki/"
-git fetch origin
 git st
 git lg -10
 
