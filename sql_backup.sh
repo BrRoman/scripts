@@ -21,7 +21,7 @@ dumpmysql statistiques
 
 # Download remote databases:
 echo "Download remote databases:"
-./receive_sql_server.sh
+/home/fr_romain/Scripts/receive_sql_server.sh
 echo "---"
 
 
