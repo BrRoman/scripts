@@ -170,6 +170,15 @@ git lg -10
 echo
 echo '--------------------'
 echo
+echo 'summernote:'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/summernote"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
 echo 'TCPDF:'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/TCPDF"
 git fetch upstream
