@@ -31,13 +31,12 @@ export_site "hotellerie/" "hotellerie/"
 export_site "livrets/" "livrets/"
 export_site "missa/" "missa/"
 export_site "ordo_flav/" "ordomatic/"
-export_site "ordomatic/" "ordomatic++/"
 export_site "ornitho/" "ornitho/"
 export_site "statistiques/" "statistiques/"
 export_site "typetrainer/" "typetrainer/"
 
 
-# Export not-gite sites:
+# Export not-git sites:
 echo
 echo -----------------------
 echo "accueil/"
