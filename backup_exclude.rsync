@@ -1,6 +1,7 @@
 .cache*
 *Trash*
 *.iso
+*.vdi
 *.aux
 *.gaux
 *.glog
