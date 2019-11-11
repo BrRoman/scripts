@@ -2,9 +2,9 @@
 
 # This scripts launches some apps and commands on startup (via Startup Applications Preferences).
 
-firefox
-thunderbird
-code
+firefox &
+thunderbird &
+code &
 
 while true; do
 # Counteract side effects of VSCode (as it seems):
