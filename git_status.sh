@@ -125,6 +125,15 @@ git lg -10
 echo
 echo '--------------------'
 echo
+echo 'electronjs.org:'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/electronjs.org/"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
 echo 'gregorio:'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/Gregorio/gregorio/"
 git fetch upstream
@@ -154,6 +163,15 @@ echo '--------------------'
 echo
 echo 'latin-ecclesiastic-accents:'
 cd "/media/fr_romain/DATA/Documents/Langues/Latin/latin-ecclesiastic-accents/"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'nodebook'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/nodebook/"
 git fetch upstream
 git st
 git lg -10
