@@ -10,5 +10,5 @@
 *VirtualBox*
 __pycache__*
 .*.sw[op]
-~/Mail/Inbox
-~/Mail/Sent
+Mail/Inbox
+Mail/Sent
