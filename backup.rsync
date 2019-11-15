@@ -12,7 +12,7 @@ ARCHIVEROOT=/media/fr_romain/SVG_SYSTEM/fr_romain
 CURRENT=main
 INCREMENTDIR=`date +%Y-%m-%d`
 OPTIONS="--force --ignore-errors --delete --delete-excluded \
- --exclude-from=$EXCLUDES --backup --backup-dir=$ARCHIVEROOT/$INCREMENTDIR -av"
+ --exclude-from=$EXCLUDES --backup --backup-dir=$ARCHIVEROOT/$INCREMENTDIR -arv"
 export PATH=$PATH:/bin:/usr/bin:/usr/local/bin
 install -d $ARCHIVEROOT/$CURRENT
 do_rsync()
@@ -47,7 +47,7 @@ fi
 BACKUPDIR=/media/fr_romain/DATA/
 ARCHIVEROOT=/media/fr_romain/SVG_DATA
 OPTIONS="--force --ignore-errors --delete --delete-excluded \
- --exclude-from=$EXCLUDES --backup --backup-dir=$ARCHIVEROOT/$INCREMENTDIR -av"
+ --exclude-from=$EXCLUDES --backup --backup-dir=$ARCHIVEROOT/$INCREMENTDIR -arv"
 install -d $ARCHIVEROOT/$CURRENT
 do_rsync()
 {
