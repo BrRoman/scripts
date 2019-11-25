@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ------------------------
+# My sites and apps:
+
 echo
 echo '--------------------'
 echo
@@ -104,6 +107,11 @@ cd "/media/fr_romain/DATA/Sites/typetrainer/"
 git st
 git lg -10
 
+
+
+# ------------------------
+# Forks:
+
 echo
 echo '--------------------'
 echo
@@ -118,6 +126,15 @@ echo '--------------------'
 echo
 echo 'divinum-officium:'
 cd "/media/fr_romain/DATA/Documents/Liturgie/divinum-officium/"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'electron-fiddle'
+cd "/home/fr_romain/Documents/Informatique/Prog/forks/electron-fiddle/"
 git fetch upstream
 git st
 git lg -10
@@ -179,6 +196,24 @@ git lg -10
 echo
 echo '--------------------'
 echo
+echo 'nosqlclient'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/nosqlclient/"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
+echo 'pencil'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/pencil/"
+git fetch upstream
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
 echo 'php-barcode:'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/php-barcode"
 git fetch upstream
@@ -197,8 +232,8 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'TCPDF:'
-cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/TCPDF"
+echo 'tcpdf:'
+cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/tcpdf"
 git fetch upstream
 git st
 git lg -10
