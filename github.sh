@@ -204,6 +204,8 @@ echo
 echo 'latin-ecclesiastic-accents:'
 cd "/media/fr_romain/DATA/Documents/Langues/Latin/latin-ecclesiastic-accents/"
 git fetch upstream
+git push origin
+git push upstream
 git st
 git lg -10
 
