@@ -42,6 +42,15 @@ git lg -10
 echo
 echo '--------------------'
 echo
+echo 'infirmerie:'
+cd "/media/fr_romain/DATA/Sites/infirmerie/"
+git push origin
+git st
+git lg -10
+
+echo
+echo '--------------------'
+echo
 echo 'liturgie:'
 cd "/media/fr_romain/DATA/Documents/Liturgie/liturgie/"
 git push origin
@@ -155,24 +164,6 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'electron-fiddle'
-cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/electron-fiddle/"
-git fetch upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'electronjs.org:'
-cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/electronjs.org/"
-git fetch upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
 echo 'gregorio:'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/Gregorio/gregorio/"
 git fetch upstream
@@ -206,24 +197,6 @@ cd "/media/fr_romain/DATA/Documents/Langues/Latin/latin-ecclesiastic-accents/"
 git fetch upstream
 git push origin
 git push upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'nodebook'
-cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/nodebook/"
-git fetch upstream
-git st
-git lg -10
-
-echo
-echo '--------------------'
-echo
-echo 'nosqlclient'
-cd "/media/fr_romain/DATA/Documents/Informatique/Prog/forks/nosqlclient/"
-git fetch upstream
 git st
 git lg -10
 
