@@ -78,8 +78,8 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'ordo_flav:'
-cd "/media/fr_romain/DATA/Sites/ordo_flav/"
+echo 'ordomatic:'
+cd "/media/fr_romain/DATA/Sites/ordomatic/"
 git push origin
 git st
 git lg -10
@@ -87,8 +87,8 @@ git lg -10
 echo
 echo '--------------------'
 echo
-echo 'ordomatic:'
-cd "/media/fr_romain/DATA/Sites/ordomatic/"
+echo 'ordomatic_flavigny:'
+cd "/media/fr_romain/DATA/Sites/ordomatic_flavigny/"
 git push origin
 git st
 git lg -10
