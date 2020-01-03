@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+
+#############################################################
+# This script pushes local sites to Github and fetch remotes.
+#############################################################
+
+
 # ------------------------
 # My sites and apps:
 
@@ -172,7 +179,6 @@ git lg -10
 
 echo
 echo '--------------------'
-git push origin
 echo
 echo 'gregorio site:'
 cd "/media/fr_romain/DATA/Documents/Informatique/Prog/Gregorio/gregorio-doc/"

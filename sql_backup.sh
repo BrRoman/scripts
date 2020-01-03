@@ -1,6 +1,13 @@
 #!/bin/bash
 
-# mysqldump all the databases:
+
+
+######################################################
+# This script synchronizes local and remote databases.
+######################################################
+
+
+# Dump local databases:
 echo "> Dump local databases:"
 dumpmysql(){
     `mysqldump $1 > ~/Sites/sql/$1.sql`
@@ -18,14 +25,15 @@ dumpmysql missa
 dumpmysql ordomatic
 dumpmysql statistiques 
 
+
 # Download remote databases:
 echo "---"
 echo ""
 echo "> Download remote databases:"
-/home/fr_romain/Scripts/receive_sql_server.sh
+rsync -arv fr_romain@192.168.1.21:/home/fr_romain/Sites/sql/*_server.sql /home/fr_romain/Sites/sql/
 
 
-# Update all the remote databases:
+# Update local from remote databases:
 echo "---"
 echo ""
 echo "> Update from remote databases:"

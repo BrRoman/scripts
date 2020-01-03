@@ -1,8 +1,11 @@
 #!/bin/bash
 
-####################################################################
-# This script exports local files to Echanges/Fr. Romain/Ressources.
-####################################################################
+
+
+######################################################################
+# This script exports local files to 'Echanges/Fr. Romain/Ressources'.
+######################################################################
+
 
 sudo mount -t cifs -o guest //192.168.1.11/Echanges/Fr.\ Romain/Ressources /media/fr_romain/Echanges
 
