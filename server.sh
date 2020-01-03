@@ -27,15 +27,15 @@ dumpmysql statistiques
 
 
 # Download remote databases:
-echo ---
-echo ""
+echo
+echo
 echo "> Download remote databases:"
 rsync -arv fr_romain@192.168.1.21:/home/fr_romain/Sites/sql/*_server.sql /home/fr_romain/Sites/sql/
 
 
 # Update local from remote databases:
-echo "---"
-echo ""
+echo
+echo
 echo "> Update from remote databases:"
 mysql_update_from_remote(){
     `mysql $1 < ~/Sites/sql/$1_server.sql`
@@ -53,10 +53,10 @@ mysql_update_from_remote statistiques
 
 
 # Export git sites that are on branch master:
+echo
+echo
 echo "> Export git sites that are on branch master:"
 export_site(){
-    echo
-    echo -----------------------
     echo $1
     cd ~/Sites/$1
     branch=`git branch | grep \* | cut -d ' ' -f2`
@@ -65,6 +65,7 @@ export_site(){
     else
         echo "On branch *$branch*";
     fi
+    echo ---
 }
 export_site "absences/" "absences/"
 export_site "accenteur/" "accenteur/"
@@ -84,24 +85,23 @@ export_site "typetrainer/" "typetrainer/"
 
 
 # Export not-git sites:
-echo "> Export not git sites and databases:"
 echo
-echo -----------------------
+echo "> Export not-git sites and databases:"
 echo "accueil/"
 rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/accueil/ fr_romain@192.168.1.21:/home/fr_romain/Sites/
-echo
-echo -----------------------
+echo ---
 echo "courses/"
 rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/courses/ fr_romain@192.168.1.21:/home/fr_romain/Sites/courses
-echo
-echo -----------------------
+echo ---
 echo "sql/"
 rsync -rptgovDL -ssh --exclude-from='/home/fr_romain/Scripts/server_exclude.rsync' ~/Sites/sql/ fr_romain@192.168.1.21:/home/fr_romain/Sites/sql
+echo ---
 
 
 # Export Editions:
-echo "> Export editions:"
 echo
-echo -----------------------
+echo
+echo "> Export editions:"
 echo "Éditions/"
 rsync -rptgovDL -ssh  ~/Editions/ fr_romain@192.168.1.21:/home/fr_romain/Éditions/
+echo

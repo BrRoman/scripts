@@ -26,7 +26,7 @@ do
         then
             busy=false
         else
-            echo -n '.'
+            echo -n "."
             sleep 1
         fi
     else
