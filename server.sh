@@ -23,6 +23,7 @@ dumpmysql hotellerie
 dumpmysql livrets
 dumpmysql missa
 dumpmysql ordomatic
+dumpmysql polyglotte
 dumpmysql statistiques 
 
 
@@ -80,6 +81,7 @@ export_site "livrets/" "livrets/"
 export_site "missa/" "missa/"
 export_site "ordomatic_flavigny/" "ordomatic/"
 export_site "ornitho/" "ornitho/"
+export_site "polyglotte/" "polyglotte/"
 export_site "statistiques/" "statistiques/"
 export_site "typetrainer/" "typetrainer/"
 
