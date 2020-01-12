@@ -20,6 +20,7 @@ dumpmysql(){
 dumpmysql absences
 dumpmysql editor
 dumpmysql hotellerie 
+dumpmysql infirmerie
 dumpmysql livrets
 dumpmysql missa
 dumpmysql ordomatic
@@ -49,6 +50,7 @@ mysql_update_from_remote(){
 mysql_update_from_remote absences
 mysql_update_from_remote editor
 mysql_update_from_remote hotellerie 
+mysql_update_from_remote infirmerie
 mysql_update_from_remote missa
 mysql_update_from_remote statistiques 
 
