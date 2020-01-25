@@ -10,3 +10,10 @@ __pycache__*
 comptaperso.sql
 woodiens.sql
 *_server.sql
+.coverage
+htmlcov/
+lib/
+bin/
+include/
+site-packages/
+static_files/
