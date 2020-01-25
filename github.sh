@@ -31,6 +31,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "bible_works:"
+cd "/media/fr_romain/DATA/Sites/bible_works/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "editor:"
 cd "/media/fr_romain/DATA/Editions/editor/"
 git push origin
