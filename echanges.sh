@@ -7,7 +7,7 @@
 ######################################################################
 
 
-sudo mount -t cifs -o guest //192.168.1.11/Echanges/Fr.\ Romain/Ressources /media/fr_romain/Echanges
+sudo mount -t cifs -o guest //192.168.1.11/Echanges/Fr.\ Romain/Public /media/fr_romain/Echanges
 
 rsync_echanges(){
     sudo rsync -arv "$1" /media/fr_romain/Echanges
