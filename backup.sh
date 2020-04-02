@@ -3,7 +3,7 @@
 
 
 ###################################################
-# This script makes a backup of fr_romain and data.
+# This script makes a backup of frromain and data.
 ###################################################
 
 
@@ -13,9 +13,9 @@
 
 MAILADDR=editeur@traditions-monastiques.com
 HOSTNAME=your_hostname_here
-BACKUPDIR=/home/fr_romain/
-EXCLUDES=/home/fr_romain/Scripts/backup_exclude.rsync
-ARCHIVEROOT=/media/fr_romain/SVG_SYSTEM/fr_romain
+BACKUPDIR=/home/frromain/
+EXCLUDES=/home/frromain/Scripts/backup_exclude.rsync
+ARCHIVEROOT=/media/frromain/SVG_SYSTEM/fr_romain
 CURRENT=main
 INCREMENTDIR=`date +%Y-%m-%d`
 OPTIONS="--force --ignore-errors --delete --delete-excluded \
@@ -51,8 +51,8 @@ fi
 ##       DATA       ##
 ######################
 
-BACKUPDIR=/media/fr_romain/DATA/
-ARCHIVEROOT=/media/fr_romain/SVG_DATA
+BACKUPDIR=/media/frromain/DATA/
+ARCHIVEROOT=/media/frromain/SVG_DATA
 OPTIONS="--force --ignore-errors --delete --delete-excluded \
  --exclude-from=$EXCLUDES --backup --backup-dir=$ARCHIVEROOT/$INCREMENTDIR -arv"
 install -d $ARCHIVEROOT/$CURRENT
