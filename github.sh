@@ -76,6 +76,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "memo:"
+cd "/media/frromain/DATA/Sites/memo/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "missa:"
 cd "/media/frromain/DATA/Sites/missa/"
 git push origin
