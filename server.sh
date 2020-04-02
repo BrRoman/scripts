@@ -72,6 +72,7 @@ export_site(){
 }
 export_site "absences/" "absences/"
 export_site "accenteur/" "accenteur/"
+export_site "accueil/" ""
 export_site "barcode_js/" "barcode_js/"
 export_site "barcode_php/" "barcode_php/"
 export_site "editor/" "editor/"
@@ -93,9 +94,6 @@ export_site "typetrainer/" "typetrainer/"
 # Export not-git sites:
 echo
 echo "> Export not-git sites and databases:"
-echo "accueil/"
-rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/accueil/ fr_romain@192.168.1.21:/home/fr_romain/Sites/
-echo ---
 echo "courses/"
 rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/courses/ fr_romain@192.168.1.21:/home/fr_romain/Sites/courses
 echo ---

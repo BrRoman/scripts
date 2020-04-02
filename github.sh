@@ -31,6 +31,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "accueil:"
+cd "/media/frromain/DATA/Sites/accueil/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "editor:"
 cd "/media/frromain/DATA/Editions/editor/"
 git push origin
