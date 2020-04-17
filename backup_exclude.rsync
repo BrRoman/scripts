@@ -12,3 +12,4 @@ __pycache__*
 .*.sw[op]
 Mail/Inbox
 Mail/Sent
+Mail/Postponed
