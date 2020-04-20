@@ -19,13 +19,13 @@ dumpmysql(){
 }
 dumpmysql absences
 dumpmysql editor
-dumpmysql hotellerie 
+dumpmysql hotellerie
 dumpmysql infirmerie
 dumpmysql livrets
 dumpmysql missa
 dumpmysql ordomatic
 dumpmysql polyglotte
-dumpmysql statistiques 
+dumpmysql statistiques
 
 
 # Download remote databases:
@@ -77,7 +77,7 @@ export_site "barcode_js/" "barcode_js/"
 export_site "barcode_php/" "barcode_php/"
 export_site "editor/" "editor/"
 export_site "gregorio-doc/" "gregorio-doc/"
-export_site "hotellerie/hotellerie/" "hotellerie-django/hotellerie/"
+export_site "hotellerie/" "hotellerie/"
 export_site "infirmerie/infirmerie/" "infirmerie/infirmerie/"
 export_site "jgabc/" "jgabc/"
 export_site "livrets/" "livrets/"
