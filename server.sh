@@ -23,10 +23,10 @@ dumpmysql hotellerie
 dumpmysql infirmerie
 dumpmysql livrets
 dumpmysql missa
-dumpmysql ordomatic
-dumpmysql polyglotte
 dumpmysql statistiques
 
+mongoexport --db=polyglotte --collection=verses --out=/home/frromain/Sites/polyglotte/.secret/polyglotte.json
+echo "Polyglotte dumped with success!"
 
 # Download remote databases:
 echo
@@ -55,10 +55,10 @@ mysql_update_from_remote missa
 mysql_update_from_remote statistiques 
 
 
-# Export git sites that are on branch master:
+# Git sites that are on branch master:
 echo
 echo
-echo "> Export git sites that are on branch master:"
+echo "> Git sites that are on branch master:"
 export_site(){
     echo $1
     cd ~/Sites/$1
@@ -83,17 +83,17 @@ export_site "jgabc/" "jgabc/"
 export_site "livrets/" "livrets/"
 export_site "memo/" "memo/"
 export_site "missa/" "missa/"
-export_site "ordomatic/ordomatic/" "ordomatic-django/ordomatic/"
+export_site "ordomatic/" "ordomatic-meteor/"
 export_site "ordomatic-flavigny/" "ordomatic/"
 export_site "ornitho/" "ornitho/"
-export_site "polyglotte/polyglotte/" "polyglotte/polyglotte/"
+export_site "polyglotte/" "polyglotte/"
 export_site "statistiques/" "statistiques/"
 export_site "typetrainer/" "typetrainer/"
 
 
-# Export not-git sites:
+# Other:
 echo
-echo "> Export not-git sites and databases:"
+echo "> Other:"
 echo "courses/"
 rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/courses/ fr_romain@192.168.1.21:/home/fr_romain/Sites/courses
 echo ---
@@ -102,10 +102,10 @@ rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync
 echo ---
 
 
-# Export Editions:
+# Editions:
 echo
 echo
-echo "> Export editions:"
+echo "> Editions:"
 echo "Éditions/"
 rsync -rptgovDL -ssh  ~/Editions/ fr_romain@192.168.1.21:/home/fr_romain/Éditions/
 echo
