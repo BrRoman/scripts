@@ -40,6 +40,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "cours:"
+cd "/media/frromain/DATA/Documents/Cours/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "editor:"
 cd "/media/frromain/DATA/Editions/editor/"
 git push origin
@@ -132,15 +141,6 @@ echo "--------------------"
 echo
 echo "polyglotte:"
 cd "/media/frromain/DATA/Sites/polyglotte/"
-git push origin
-git st
-git lg -10
-
-echo
-echo "--------------------"
-echo
-echo "psaumes:"
-cd "/media/frromain/DATA/Documents/Sainte_Ecriture/3 Ancien Testament/Cours sur les Psaumes/"
 git push origin
 git st
 git lg -10
