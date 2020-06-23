@@ -23,10 +23,10 @@ dumpmysql hotellerie
 dumpmysql infirmerie
 dumpmysql livrets
 dumpmysql missa
+dumpmysql ordomatic
+dumpmysql polyglotte
 dumpmysql statistiques
 
-mongoexport --db=polyglotte --collection=verses --out=/home/frromain/Sites/polyglotte/.secret/polyglotte.json
-echo "Polyglotte dumped with success!"
 
 # Download remote databases:
 echo
@@ -49,10 +49,11 @@ mysql_update_from_remote(){
 }
 mysql_update_from_remote absences
 mysql_update_from_remote editor
-mysql_update_from_remote hotellerie 
+mysql_update_from_remote hotellerie
 mysql_update_from_remote infirmerie
 mysql_update_from_remote missa
-mysql_update_from_remote statistiques 
+mysql_update_from_remote ordomatic
+mysql_update_from_remote statistiques
 
 
 # Git sites that are on branch master:
@@ -77,16 +78,17 @@ export_site "barcode_js/" "barcode_js/"
 export_site "barcode_php/" "barcode_php/"
 export_site "editor/" "editor/"
 export_site "gregorio-doc/" "gregorio-doc/"
-export_site "hotellerie/" "hotellerie/"
+export_site "hotellerie/hotellerie/" "hotellerie-django/hotellerie/"
+export_site "hotellerie-php/" "hotellerie/"
 export_site "infirmerie/infirmerie/" "infirmerie/infirmerie/"
 export_site "jgabc/" "jgabc/"
 export_site "livrets/" "livrets/"
 export_site "memo/" "memo/"
 export_site "missa/" "missa/"
-export_site "ordomatic/" "ordomatic-meteor/"
+export_site "ordomatic/ordomatic/" "ordomatic-django/ordomatic/"
 export_site "ordomatic-flavigny/" "ordomatic/"
 export_site "ornitho/" "ornitho/"
-export_site "polyglotte/" "polyglotte/"
+export_site "polyglotte/polyglotte/" "polyglotte/polyglotte/"
 export_site "statistiques/" "statistiques/"
 export_site "typetrainer/" "typetrainer/"
 
