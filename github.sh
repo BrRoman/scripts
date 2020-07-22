@@ -2,9 +2,9 @@
 
 
 
-#############################################################
-# This script pushes local sites to Github and fetch remotes.
-#############################################################
+######################################################################
+# This script pushes local sites to Github and fetch foreign projects.
+######################################################################
 
 
 # ------------------------
@@ -69,6 +69,15 @@ echo "--------------------"
 echo
 echo "infirmerie:"
 cd "/media/frromain/DATA/Sites/infirmerie/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
+echo "lectio:"
+cd "/media/frromain/DATA/Documents/Lectio/"
 git push origin
 git st
 git lg -10
@@ -175,16 +184,7 @@ git lg -10
 
 
 # ------------------------
-# Forks:
-
-echo
-echo "--------------------"
-echo
-echo "divinum-officium:"
-cd "/media/frromain/DATA/Documents/Liturgie/divinum-officium/"
-git fetch upstream
-git st
-git lg -10
+# Foreign:
 
 echo
 echo "--------------------"
@@ -209,8 +209,7 @@ echo "--------------------"
 echo
 echo "latin-ecclesiastic-accents:"
 cd "/media/frromain/DATA/Documents/Langues/Latin/latin-ecclesiastic-accents/"
-git fetch upstream
+git fetch origin
 git push origin
-git push upstream
 git st
 git lg -10
