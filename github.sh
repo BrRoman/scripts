@@ -50,7 +50,7 @@ echo
 echo "--------------------"
 echo
 echo "editor:"
-cd "/media/frromain/DATA/Editions/editor/"
+cd "/media/frromain/DATA/Sites/editor/"
 git push origin
 git st
 git lg -10
