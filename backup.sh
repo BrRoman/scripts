@@ -11,8 +11,8 @@
 ##       SYSTEM       ##
 ########################
 
-# Mails aside (would be too heavy in the case of an incremental backup):
-rsync -arv /home/frromain/Mail/ /media/frromain/SVG_SYSTEM/Mail
+# Mails of Mutt aside (would be too heavy in the case of an incremental backup):
+#rsync -arv /home/frromain/Mail/ /media/frromain/SVG_SYSTEM/Mail
 
 
 MAILADDR=editeur@traditions-monastiques.com

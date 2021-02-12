@@ -33,6 +33,8 @@ echo
 echo
 echo "> Download remote databases:"
 rsync -arv fr_romain@192.168.1.21:/home/fr_romain/Sites/sql/*_server.sql /home/frromain/Sites/sql/
+# If there is some mongo to repatriate (*_server.json files) :
+# rsync -arv fr_romain@192.168.1.21:/home/fr_romain/Sites/sql/*_server.* /home/frromain/Sites/sql/
 
 
 # Update local from remote databases:
@@ -55,6 +57,9 @@ mysql_update_from_remote missa
 mysql_update_from_remote ordomatic
 mysql_update_from_remote statistiques
 
+# echo "> Update editor (mongo) from remote database (JSON file):"
+# mongo editor --eval 'db.products.drop()'
+# mongoimport --db=editor --collection=products --file=/home/frromain/Sites/sql/editor_server.json
 
 # Git sites that are on branch master:
 echo
@@ -76,16 +81,16 @@ export_site "accenteur/" "accenteur/"
 export_site "accueil/" ""
 export_site "barcode_js/" "barcode_js/"
 export_site "barcode_php/" "barcode_php/"
-export_site "editor/" "editor/"
+export_site "editor/editor/" "editor-django/editor/"
 export_site "gregorio-doc/" "gregorio-doc/"
-export_site "hotellerie/hotellerie/" "hotellerie-django/hotellerie/"
-export_site "hotellerie-php/" "hotellerie/"
+export_site "hotellerie/hotellerie/" "hotellerie/hotellerie/"
 export_site "infirmerie/infirmerie/" "infirmerie/infirmerie/"
 export_site "jgabc/" "jgabc/"
-export_site "livrets/" "livrets/"
+export_site "livrets/livrets/" "livrets-django/livrets/"
+export_site "livrets-php/" "livrets/"
 export_site "memo/" "memo/"
 export_site "missa/" "missa/"
-export_site "ordomatic/ordomatic/" "ordomatic-django/ordomatic/"
+export_site "ordomatic/ordomatic" "ordomatic-django/ordomatic/"
 export_site "ordomatic-flavigny/" "ordomatic/"
 export_site "ornitho/" "ornitho/"
 export_site "polyglotte/polyglotte/" "polyglotte/polyglotte/"

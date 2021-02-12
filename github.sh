@@ -103,6 +103,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "livrets-php:"
+cd "/media/frromain/DATA/Sites/livrets-php/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "memo:"
 cd "/media/frromain/DATA/Sites/memo/"
 git push origin
