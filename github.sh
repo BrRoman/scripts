@@ -22,6 +22,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "absences-php:"
+cd "/media/frromain/DATA/Sites/absences-php/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "accenteur:"
 cd "/media/frromain/DATA/Sites/accenteur/"
 git push origin
@@ -40,6 +49,33 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "barcode:"
+cd "/media/frromain/DATA/Sites/barcode/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
+echo "barcode-js:"
+cd "/media/frromain/DATA/Sites/barcode-js/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
+echo "barcode-php:"
+cd "/media/frromain/DATA/Sites/barcode-php/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "cours:"
 cd "/media/frromain/DATA/Documents/Cours/"
 git push origin
@@ -51,6 +87,15 @@ echo "--------------------"
 echo
 echo "editor:"
 cd "/media/frromain/DATA/Sites/editor/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
+echo "editor-php:"
+cd "/media/frromain/DATA/Sites/editor-php/"
 git push origin
 git st
 git lg -10
@@ -130,6 +175,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "missa-php:"
+cd "/media/frromain/DATA/Sites/missa-php/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "ordomatic:"
 cd "/media/frromain/DATA/Sites/ordomatic/"
 git push origin
@@ -177,6 +231,15 @@ echo "--------------------"
 echo
 echo "statistiques:"
 cd "/media/frromain/DATA/Sites/statistiques/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
+echo "statistiques-php:"
+cd "/media/frromain/DATA/Sites/statistiques-php/"
 git push origin
 git st
 git lg -10
