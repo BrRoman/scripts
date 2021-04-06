@@ -33,8 +33,6 @@ echo
 echo
 echo "> Download remote databases:"
 rsync -arv fr_romain@192.168.1.21:/home/fr_romain/Sites/sql/*_server.sql /home/frromain/Sites/sql/
-# If there is some mongo to repatriate (*_server.json files) :
-# rsync -arv fr_romain@192.168.1.21:/home/fr_romain/Sites/sql/*_server.* /home/frromain/Sites/sql/
 
 
 # Update local from remote databases:
@@ -57,9 +55,6 @@ mysql_update_from_remote missa
 mysql_update_from_remote ordomatic
 mysql_update_from_remote statistiques
 
-# echo "> Update editor (mongo) from remote database (JSON file):"
-# mongo editor --eval 'db.products.drop()'
-# mongoimport --db=editor --collection=products --file=/home/frromain/Sites/sql/editor_server.json
 
 # Git sites that are on branch master:
 echo
