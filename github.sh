@@ -94,15 +94,6 @@ git lg -10
 echo
 echo "--------------------"
 echo
-echo "editor-php:"
-cd "/media/frromain/DATA/Sites/editor-php/"
-git push origin
-git st
-git lg -10
-
-echo
-echo "--------------------"
-echo
 echo "hotellerie:"
 cd "/media/frromain/DATA/Sites/hotellerie/"
 git push origin
