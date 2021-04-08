@@ -229,15 +229,6 @@ git lg -10
 echo
 echo "--------------------"
 echo
-echo "statistiques-php:"
-cd "/media/frromain/DATA/Sites/statistiques-php/"
-git push origin
-git st
-git lg -10
-
-echo
-echo "--------------------"
-echo
 echo "typetrainer:"
 cd "/media/frromain/DATA/Sites/typetrainer/"
 git push origin

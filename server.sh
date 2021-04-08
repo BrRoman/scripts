@@ -93,7 +93,6 @@ export_site "ordomatic-flavigny/" "ordomatic/"
 export_site "ornitho/" "ornitho/"
 export_site "polyglotte/polyglotte/" "polyglotte/polyglotte/"
 export_site "statistiques/statistiques/" "statistiques-django/statistiques/"
-export_site "statistiques-php/" "statistiques/"
 export_site "typetrainer/" "typetrainer/"
 
 
