@@ -32,7 +32,7 @@ dumpmysql statistiques
 echo
 echo
 echo "> Download remote databases:"
-rsync -arv fr_romain@192.168.1.21:/home/fr_romain/Sites/sql/*_server.sql /home/frromain/Sites/sql/
+rsync -arv frromain@192.168.1.21:/home/frromain/Sites/sql/*_server.sql /home/frromain/Sites/sql/
 
 
 # Update local from remote databases:
@@ -50,9 +50,9 @@ mysql_update_from_remote(){
 mysql_update_from_remote absences
 mysql_update_from_remote editor
 mysql_update_from_remote hotellerie
+mysql_update_from_remote imprimerie
 mysql_update_from_remote infirmerie
 mysql_update_from_remote missa
-mysql_update_from_remote ordomatic
 mysql_update_from_remote statistiques
 
 
@@ -65,34 +65,32 @@ export_site(){
     cd ~/Sites/$1
     branch=`git branch | grep \* | cut -d ' ' -f2`
     if [ "$branch" == 'master' ]; then
-        rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/$1 fr_romain@192.168.1.21:/home/fr_romain/Sites/$2
+        rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/$1 frromain@192.168.1.21:/home/frromain/Sites/$2
     else
         echo "On branch *$branch*";
     fi
     echo ---
 }
-export_site "absences/absences/" "absences-django/absences/"
-export_site "absences-php/" "absences/"
+export_site "absences/absences/" "absences/absences/"
 export_site "accenteur/" "accenteur/"
 export_site "accueil/" ""
-export_site "barcode/barcode/" "barcode-django/barcode/"
-export_site "barcode-js/" "barcode_js/"
-export_site "barcode-php/" "barcode_php/"
-export_site "editor/editor/" "editor-django/editor/"
+# FIXME: pas de rsync pour barcode et editor tant que le problème des static files n'est pas réglé.
+# export_site "barcode/barcode/" "barcode-django/barcode/"
+# export_site "editor/editor/" "editor/editor/"
 export_site "gregorio-doc/" "gregorio-doc/"
-export_site "hotellerie/hotellerie/" "hotellerie-django/hotellerie/"
+export_site "hotellerie/hotellerie/" "hotellerie/hotellerie/"
+export_site "imprimerie/imprimerie/" "imprimerie/imprimerie/"
 export_site "infirmerie/infirmerie/" "infirmerie/infirmerie/"
 export_site "jgabc/" "jgabc/"
 export_site "livrets/livrets/" "livrets-django/livrets/"
 export_site "livrets-php/" "livrets/"
 export_site "memo/" "memo/"
-export_site "missa/missa/" "missa-django/missa/"
-export_site "missa-php/" "missa/"
-export_site "ordomatic/ordomatic" "ordomatic-django/ordomatic/"
-export_site "ordomatic-flavigny/" "ordomatic/"
+export_site "missa/missa/" "missa/missa/"
+export_site "ordomatic/ordomatic" "ordomatic/ordomatic/"
+export_site "ordomatic-flavigny/" "ordomatic-php/"
 export_site "ornitho/" "ornitho/"
 export_site "polyglotte/polyglotte/" "polyglotte/polyglotte/"
-export_site "statistiques/statistiques/" "statistiques-django/statistiques/"
+export_site "statistiques/statistiques/" "statistiques/statistiques/"
 export_site "typetrainer/" "typetrainer/"
 
 
@@ -100,10 +98,10 @@ export_site "typetrainer/" "typetrainer/"
 echo
 echo "> Other:"
 echo "courses/"
-rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/courses/ fr_romain@192.168.1.21:/home/fr_romain/Sites/courses
+rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/courses/ frromain@192.168.1.21:/home/frromain/Sites/courses
 echo ---
 echo "sql/"
-rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/sql/ fr_romain@192.168.1.21:/home/fr_romain/Sites/sql
+rsync -rptgovDL -ssh --exclude-from='/home/frromain/Scripts/server_exclude.rsync' ~/Sites/sql/ frromain@192.168.1.21:/home/frromain/Sites/sql
 echo ---
 
 
@@ -112,5 +110,5 @@ echo
 echo
 echo "> Editions:"
 echo "Éditions/"
-rsync -rptgovDL -ssh  ~/Editions/ fr_romain@192.168.1.21:/home/fr_romain/Éditions/
+rsync -rptgovDL -ssh  ~/Editions/ frromain@192.168.1.21:/home/frromain/Éditions/
 echo
