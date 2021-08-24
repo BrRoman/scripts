@@ -74,9 +74,8 @@ export_site(){
 export_site "absences/absences/" "absences/absences/"
 export_site "accenteur/" "accenteur/"
 export_site "accueil/" ""
-# FIXME: pas de rsync pour barcode et editor tant que le problème des static files n'est pas réglé.
-# export_site "barcode/barcode/" "barcode-django/barcode/"
-# export_site "editor/editor/" "editor/editor/"
+export_site "barcode/barcode/" "barcode/barcode/"
+export_site "editor/editor/" "editor/editor/"
 export_site "gregorio-doc/" "gregorio-doc/"
 export_site "hotellerie/hotellerie/" "hotellerie/hotellerie/"
 export_site "imprimerie/imprimerie/" "imprimerie/imprimerie/"
