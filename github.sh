@@ -49,15 +49,6 @@ git lg -10
 echo
 echo "--------------------"
 echo
-echo "cours:"
-cd "/media/frromain/DATA/Documents/Cours/"
-git push origin
-git st
-git lg -10
-
-echo
-echo "--------------------"
-echo
 echo "editor:"
 cd "/media/frromain/DATA/Sites/editor/"
 git push origin
