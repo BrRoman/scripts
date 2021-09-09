@@ -49,6 +49,15 @@ git lg -10
 echo
 echo "--------------------"
 echo
+echo "de_imitatione_christi:"
+cd "/media/frromain/DATA/Documents/Spi/Imitation/de_imitatione_christi/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
 echo "editor:"
 cd "/media/frromain/DATA/Sites/editor/"
 git push origin
@@ -78,15 +87,6 @@ echo "--------------------"
 echo
 echo "infirmerie:"
 cd "/media/frromain/DATA/Sites/infirmerie/"
-git push origin
-git st
-git lg -10
-
-echo
-echo "--------------------"
-echo
-echo "lectio:"
-cd "/media/frromain/DATA/Documents/Lectio/"
 git push origin
 git st
 git lg -10
@@ -195,6 +195,15 @@ echo "--------------------"
 echo
 echo "typetrainer:"
 cd "/media/frromain/DATA/Sites/typetrainer/"
+git push origin
+git st
+git lg -10
+
+echo
+echo "--------------------"
+echo
+echo "vulgate:"
+cd "/media/frromain/DATA/Documents/Sainte_Ecriture/0 Bibles/4 Vulgate/"
 git push origin
 git st
 git lg -10
