@@ -13,5 +13,6 @@ __pycache__*
 Mail/Inbox
 Mail/Sent
 Mail/Postponed
+Mail/Trash
 Mail/.signature
 Mail/.aliases
