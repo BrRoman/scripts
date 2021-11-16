@@ -10,9 +10,11 @@
 *VirtualBox*
 __pycache__*
 .*.sw[op]
+.thunderbird/
 Mail/Inbox
 Mail/Sent
 Mail/Postponed
 Mail/Trash
 Mail/.signature
 Mail/.aliases
+.meteor/
