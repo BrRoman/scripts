@@ -20,6 +20,7 @@ dumpmysql(){
 dumpmysql absences
 dumpmysql editor
 dumpmysql hotellerie
+dumpmysql imprimerie
 dumpmysql infirmerie
 dumpmysql livrets
 dumpmysql missa
